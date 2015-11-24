@@ -387,6 +387,11 @@ img {
 	}
 
 }
+.talk{
+	padding:1em 2em;
+	border:2px solid $border;
+	margin:.5em 0 2em 0;
+}
 input[type="text"], input[type="email"],input[type="password"],textarea{
 	width:100%;
 	max-width: 100%;
