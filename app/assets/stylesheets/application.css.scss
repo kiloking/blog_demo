@@ -254,7 +254,7 @@ img {
 	bottom: 0;
 }
 .slideshowController a {
-	background: transparent url(../images/arrows.png) no-repeat left top;
+	background: transparent image-url("arrows.png")no-repeat left top;
 	display: block;
 	width: 30px;
 	height: 30px;
@@ -293,6 +293,12 @@ img {
 	list-style: none;
 	padding: 5px 0px 5px 12px;
 	font-size: .9em;
+}
+.adhere{
+	margin:.5em 0 2em 0;
+	background:#48a2d1;
+
+	height:150px;
 }
 .likesfb{
 	padding:1em 2em;
