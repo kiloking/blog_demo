@@ -1,0 +1,410 @@
+@import 'normalize';
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+$dark: #424652;
+$light: #fff;
+$highlight: #cccccc;
+$border: #E9E9E9;
+$bodybg:#EDF2F7;
+$menubg:#3500A5;
+
+*{
+	box-sizing:border-box;
+}
+body{
+	font-family: 'cwTeXHei', sans-serif;
+	background-color:$bodybg;
+}
+
+.wrapper{
+	width: 1170px;
+	margin: 0 auto;
+}
+.skinny_wrapper{
+	width:80%;
+	max-width: 760px;
+	margin:0 auto;
+}
+.wrapper_padding{
+	padding:3rem 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li{
+	color: $dark;
+}
+
+h1{
+	font-size: 2.5rem;
+}
+
+h2{
+	font-size: 2rem;
+}
+
+h3{
+	font-size: 1.75rem;
+}
+
+h4{font-size: 1.375rem;}
+h5{font-size: 1.25rem;}
+h6{font-size: 1rem;}
+p,li{font-size: 1.1rem; line-height: 1.75;}
+p,ul,ol{margin:0 0 1.6em 0;}
+
+img {
+    vertical-align: middle;
+}
+#gotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;    
+    padding: 10px 15px;    
+    font-size: 20px;
+    background: #777;
+    color: white;
+    cursor: pointer;
+}
+.clearfix:before,
+.clearfix:after{
+	content:"";
+	display:table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+#main_navigation{
+	padding: .5em 3%;
+	border-bottom: 1px solid $border;
+	background:$menubg;
+	border-top: 5px solid #ffd618;
+	.name{
+		float:left;
+		font-weight: 400;
+		font-size:1em;
+		letter-spacing: 4px;
+		text-transform:uppercase;
+		border: 2px solid $border;
+		padding:1rem;
+		text-decoration: none;
+		color: $light;
+	}
+	nav{
+		float: right;
+		padding:1rem;
+		
+		a{
+			color:$light;
+			text-decoration: none;
+			margin: 0 1rem;
+			font-size: 1em;
+			&:hover{
+		
+				color:$highlight;
+		}
+		
+		}
+		.special{
+		border: 2px solid $light;
+		padding:.6rem;
+		&:hover{
+		border:2px solid $light;
+		color:$light;
+	}
+		}
+	}
+	.soical{
+		float:left;
+		padding:1rem;
+		font-size: .8em;
+		margin-left: 20px;
+		color:$light;
+		a{
+			color:$light;
+			text-decoration: none;
+			margin: 0 1rem;
+			font-size: 1em;
+			&:hover{
+		
+				color:$highlight;
+		}
+		}
+
+	}
+
+}
+.fullbar{
+	background:#18005B;
+	
+	padding:3em 0;
+	text-align: center;
+
+	p{
+		color:white;
+		font-size: 1.2em;
+		line-height: 1.3;
+	}
+
+	a{
+			color:$highlight;
+			text-decoration: none;
+			margin: 0 1rem;
+			font-size: 1em;
+			&:hover{
+		
+				color:$light;
+		}
+	}
+}
+.page-title{
+	font-weight: 400;
+	text-align:center;
+}
+.second-title{text-align:center; }
+#page_title{
+	font-weight: 400;
+	text-align:center;
+	border-bottom: 1px solid $border;
+	padding: 3em 0;
+}
+#main_footer{
+	padding:2.5em 5%;
+	border-top: 1px solid $border;
+	.copyright{
+		float:left;
+		font-size: .9em;
+		margin:0;
+
+	}	
+	nav{
+		float:right;
+		i {
+
+			color:$dark;
+			margin-left:1em;
+			padding-top: .2em;
+		}
+	}
+}
+.banner{
+	margin-top: 30px;
+	.banner-1,.banner-2{float:left;}
+	.banner-1{
+		width:480px;
+		height:330px;
+		background-color: $dark;
+		position: relative;
+	}
+	.wider{width: 680px;}
+	.block{
+		float: left;
+	    margin-left: 10px;
+	    margin-bottom: 10px;
+	    height: 160px;}
+	.banner-2{
+		height:160px;
+		background-color: $highlight;
+		position: relative;
+	}
+	.ad{   width: 220px}
+	.mask-tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    padding: 2px 10px;
+    font-size: 12px;
+    display: block;
+    width: auto;
+    margin: 0;
+    bottom: auto;
+    z-index: 50;
+    background:rgba(53, 0, 165, 0.35);
+}
+}
+.slideshow {
+	position: relative;
+	height: 160px;
+	width: 210px;
+	float: left;
+	ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+}
+.slideshow li {
+	position: absolute;
+}
+.slideshow a img{
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	border: none;
+}
+.slideshow li a{
+	display: block;
+}
+.slideshowController {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.slideshowController a {
+	background: transparent url(../images/arrows.png) no-repeat left top;
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 60px;
+	bottom: 0;
+	z-index: 9999;
+	outline: none;	/* 去除超連結虛線 */
+}
+.slideshowController .next{
+	background-position: -30px 0;
+	right: 0;
+}
+.slideshowController .play{
+	background-position: -60px 0;
+	right: 30px;
+}
+.slideshowController .pause{
+	background-position: -90px 0;
+}
+.quicknews{
+	
+	background:$menubg;
+
+	a{
+		text-decoration: none;
+		color:$light;
+		&:hover{ color:$highlight;}
+	}
+
+}
+.vticker ul{
+	padding: 0;
+}
+.vticker li{
+	list-style: none;
+	padding: 5px 0px 5px 12px;
+	font-size: .9em;
+}
+.likesfb{
+	padding:1em 2em;
+	border:2px solid $border;
+	margin:.5em 0 2em 0;
+	text-align: center;
+	hr{
+		
+		display: block;
+		height:2px;
+		border:0;
+		border-top: 2px solid $highlight;
+		margin: 2rem 0;
+	}
+	.arrow{
+		text-align: right;
+
+		a{color:$light;
+		text-decoration: none;
+		&:hover{
+			color:$highlight;
+			}
+		}
+	}
+	a{
+		text-decoration: none;
+		color:$dark;
+		&:hover{ color:$light;}
+
+	}
+}
+.price-1{
+	width:19%;
+	float:left;
+	background:#ffffff;
+
+	margin-left: 10px;
+	border:1px solid #eaeaea;
+
+	ul {
+		list-style: none outside none;
+		padding:0; margin:0;
+
+	}
+	li{	
+		list-style:none;
+		padding: 9px 0;
+		text-align: center;
+		border-bottom: 1px solid #eaeaea;
+		font-size: .9em;
+
+
+	}
+	.ps{
+		font-size: .6em;
+
+	}
+	.price-name-1{
+		font-size: 1.2em; 		
+		background:#white;
+		color:#black;
+	}
+	.price-name-2{background:#6cbcb7;}
+	.price-name-3{background:#33a1ff;color: #EFEFEF;}
+	.price-name-4{background:#f744f5;color: #EFEFEF;}
+	.price-name-5{background:#ff6000;color: #EFEFEF;}
+	.price-old-1{
+		text-decoration:line-through
+	}
+	.price-new-1{
+		color:#6cbcb7;
+		font-size: 1.2em;
+
+	}
+	.callmenow{
+		font-size: 1em;
+		border-radius: 30px;
+		background:#6cbcb7;
+		width:30px;
+		height:30px;
+		color:#fff;
+		line-height: 2.3;
+		display:inline-block;
+		margin-left: 10px;
+		margin-right:10px;
+	}
+
+}
+input[type="text"], input[type="email"],input[type="password"],textarea{
+	width:100%;
+	max-width: 100%;
+	height:3em;
+	border:2px solid $border;
+	padding: 1em;
+	margin:.5em 0 2em 0;
+
+}
+
+textarea{
+	height:20em;
+}
+input[type="submit"]{
+	outline:none;
+	background: transparent;
+	border:2px solid $border;
+	text-align: center;
+	font-size: 1em;
+	color:$dark;
+	text-decoration: none;
+	padding:1em 2em;
+	&:hover{
+		border:2px solid $highlight;
+		color:$highlight;
+	}
+
+}
+
+@import 'welcome'

@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Letmeblog</title>
+  <meta charset="UTF-8">
+	<title>成家居 - mobile first 複合式網頁設計服務，手機、平板、桌機瀏覽率一網打盡</title>
+	<link rel="stylesheet" href="css/application.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easy-ticker.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<script type="text/javascript">
+$(document).ready(function(){
 
+	var dd = $('.vticker').easyTicker({
+		direction: 'up',
+		easing: 'easeInOutBack',
+		speed: 'slow',
+		interval: 2000,
+		height: 'auto',
+		visible: 1,
+		mousePause: 0,
+		controls: {
+			up: '.up',
+			down: '.down',
+			toggle: '.toggle',
+			stopText: 'Stop !!!'
+		}
+	}).data('easyTicker');
+	
+	cc = 1;
+	$('.aa').click(function(){
+		$('.vticker ul').append('<li>' + cc + ' Triangles can be made easily using CSS also without any images. This trick requires only div tags and some</li>');
+		cc++;
+	});
+	
+	$('.vis').click(function(){
+		dd.options['visible'] = 3;
+		
+	});
+	
+	$('.visall').click(function(){
+		dd.stop();
+		dd.options['visible'] = 0 ;
+		dd.start();
+	});
+	
+});
+</script>
+<body>
+	<div id="gotop">˄</div>
+	<header id="main_navigation" class="clearfix"> 
+		<a href="#" class="name">成家居</a>
+		<div class="soical"> <a href="tel:0982826405">聯絡電話 : 0982 826 405</a> | <a href="http://line.me/ti/p/a1jsBe9PCj"><img src="images/line.png" height="20" width="20" alt="">Line : wuwood</a> | <a href="mailto:threemouth@threemouth.com">threemouth@threemouth.com</a> </div>
+		<nav>
+			<%= link_to '網誌' , posts_path %>
+				
+			<a href="#" id="ct">方案與費用</a>
+			<a href="#" id="dt">聯絡我們</a>
+			<a href="#" class="special">地產企劃</a>
+		</nav>			
+	</header>
 <%= yield %>
 
 </body>
