@@ -73,6 +73,9 @@ img {
 .clearfix:after{
 	clear: both;
 }
+.hidden{
+	display:none;
+}
 #main_navigation{
 	padding: .5em 3%;
 	border-bottom: 1px solid $border;
