@@ -420,5 +420,53 @@ input[type="submit"]{
 	}
 
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	body{ font-size: 1.1em;}
+	.vticker li{font-size: 1.1em;}
+    .wrapper {
+    	width: 100%;
+    	margin: 0 auto;
+	}
+	.small-images{
+		display:none;
+		
+	}
+	.banner{
+		.banner-1 , .banner-1 img {
+			    width: 1024px;
+			    max-width:100%;
+	    		height: 704px;
+		}
+		.mask-tags{
+			font-size: 1.1em;
+		}
+
+	}
+	.adhere , .adhere img{
+		width: 1024px;
+		max-width:100%;
+	}
+	.price-1 {width:30%;}
+}
+@media screen and (max-width: 767px) {
+       .wrapper {
+    	width: 100%;
+    	margin: 0 auto;
+	}
+	
+	.small-images{
+		display:none;
+	}
+	.slideshow a img {
+    width: 100%;
+	}
+}
+
+@media screen and (max-device-width: 480px) {
+     .wrapper {
+    	width: 100%;
+    	margin: 0 auto;
+	}
+}
 
 @import 'welcome'
