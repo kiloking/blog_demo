@@ -27,7 +27,9 @@ body{
 .wrapper_padding{
 	padding:3rem 0;
 }
-
+table, th, td {
+   border: 1px solid black;
+}
 h1,h2,h3,h4,h5,h6,p,ul,li{
 	color: $dark;
 }
@@ -331,7 +333,7 @@ img {
 	}
 }
 .price-1{
-	width:19%;
+	width:48%;
 	float:left;
 	background:#ffffff;
 
@@ -358,10 +360,10 @@ img {
 	}
 	.price-name-1{
 		font-size: 1.2em; 		
-		background:#white;
-		color:#black;
+		background:#2a2a2a;
+		color:$light;
 	}
-	.price-name-2{background:#6cbcb7;}
+	.price-name-2{background:#005fe0;color:$light;}
 	.price-name-3{background:#33a1ff;color: #EFEFEF;}
 	.price-name-4{background:#f744f5;color: #EFEFEF;}
 	.price-name-5{background:#ff6000;color: #EFEFEF;}
@@ -369,8 +371,8 @@ img {
 		text-decoration:line-through
 	}
 	.price-new-1{
-		color:#6cbcb7;
-		font-size: 1.2em;
+		color:#0c284d;
+		font-size: 1.3em;
 
 	}
 	.callmenow{
@@ -392,9 +394,21 @@ img {
 
 }
 .talk{
-	padding:1em 2em;
 	border:2px solid $border;
 	margin:.5em 0 2em 0;
+
+	ul {
+		list-style: none outside none;
+		padding:0; margin:0;
+		display:block;
+
+	}
+	li{
+		display:inline-block;
+		width:230px;
+		text-align: center;
+		padding: 9px 9px;
+	}
 }
 input[type="text"], input[type="email"],input[type="password"],textarea{
 	width:100%;
