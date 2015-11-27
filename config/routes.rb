@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   #resources :posts
-  resources :contacts, only: [:new, :create]
+  #resources :contacts, only: [:new, :create]
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
+  resources :plan, only: [:index]
   get 'welcome/index'
   root 'welcome#index'
 

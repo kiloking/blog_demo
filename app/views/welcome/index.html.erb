@@ -1,3 +1,4 @@
+<%=  flash[:notice] %>
 <div class="wrapper clearfix banner">
 		<div class="banner-1 slideshow autoPlay">
 			<ul>
@@ -224,17 +225,24 @@
 	<h4 class="second-title">網站客製？ 預算？ 大型專案處理？ 關鍵字？ 手機版？ 需要專人解說嗎？ 歡迎來信！</h4>
 	
 	<div class="skinny_wrapper wrapper_padding">
-
-		<label>Name - 暱稱或大名</label>
-		<input type="text">
-		<br>
-
-		<label>Email - 電子信箱</label>
-		<input type="text">
-		<br>
-
-		<label>Message - 請詳述您的問題，或留下電話</label>
-		<textarea></textarea>
-	
-		<input type="submit" value="Send Message" class="button">
+	<%= form_for Message.new, url: contact_path do |message_form| %>
+  
+      <%= message_form.label :name %> <br>
+      <%= message_form.text_field :name, placeholder: "尊姓大名"%>
+    
+      <br>
+      <%= message_form.label :email %> <br>
+      <%= message_form.email_field :email, placeholder: "輸入電子信箱"%>
+      <br>
+    
+      <%= message_form.label '訊息內容' %> <br>
+      <%= message_form.text_area :content, placeholder: "請輸入訊息及聯絡電話"%>
+    
+  
+      <br>
+  
+      <%= message_form.submit 'Send Message', class: 'button' %>
+    
+  
+	<% end %>
 	</div>

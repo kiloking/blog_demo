@@ -1,0 +1,22 @@
+<div class="skinny_wrapper wrapper_padding">
+<%= form_for @message, url: contact_path do |message_form| %>
+  
+      <%= message_form.label :name %> <br>
+      <%= message_form.text_field :name, placeholder: "尊姓大名"%>
+    
+      <br>
+      <%= message_form.label :email %> <br>
+      <%= message_form.email_field :email, placeholder: "輸入電子信箱"%>
+      <br>
+    
+      <%= message_form.label :content %> <br>
+      <%= message_form.text_area :content, placeholder: "請輸入訊息及聯絡電話"%>
+    
+  
+      <br>
+  
+      <%= message_form.submit 'Send Message', class: 'button' %>
+    
+  
+<% end %>
+</div>
